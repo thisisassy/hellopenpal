@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "hello-penpal",
+    siteUrl: "https://www.penpalwith.me",
+    title: "Hello Penpal",
   },
   plugins: [],
 };

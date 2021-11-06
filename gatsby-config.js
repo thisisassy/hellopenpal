@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.penpalwith.me",
-    title: "Hello Penpal",
+    title: "Penpal with me",
+    description: "",
+    url: "https://www.penpalwith.me",
+    twitterUsername: "",
   },
   plugins: [],
 };

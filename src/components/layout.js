@@ -1,12 +1,14 @@
 import React from "react"
+import Header from "./Header/header"
+import Footer from "./Footer/footer"
 
 const Layout = (props) => {
   const children = props.children
   return (
     <div>
-      <header>Hello Penpal!</header>
+      <Header />
       <main>{children}</main>
-      <footer></footer>
+      <Footer />
     </div>
   )
 }

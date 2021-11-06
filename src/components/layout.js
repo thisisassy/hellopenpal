@@ -6,7 +6,7 @@ import "../styles/global.scss"
 const Layout = (props) => {
   const children = props.children
   return (
-    <div>
+    <div className={`wrapper`}>
       <Header />
       <main>{children}</main>
       <Footer />

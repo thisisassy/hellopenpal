@@ -1,6 +1,9 @@
+@import '../../styles/variables.scss';
+
 .footer {
   display: flex;
   flex-direction: column;
+  padding: 0 0 $spacing-3;
   gap: 8px;
 }
 .footer__outer {

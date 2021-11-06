@@ -5,5 +5,8 @@ module.exports = {
     url: "https://www.penpalwith.me",
     twitterUsername: "",
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-sass`,
+    `react-helmet`,
+  ],
 };

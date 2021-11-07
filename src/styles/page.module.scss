@@ -1,0 +1,12 @@
+@import "../styles/variables.scss";
+
+.pageSection {
+  padding: 0 $spacing-3;
+  p {
+    margin: $spacing-4 0;
+    line-height: 1.7;
+  }
+}
+.sectionHeading {
+  margin: 0 0 $spacing-1;
+}

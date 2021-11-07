@@ -1,5 +1,5 @@
-@use '../styles/variables.scss';
-@use '../styles/mixins.scss';
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Sacramento&display=swap');
 
 * {
@@ -28,4 +28,11 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+.content__inner {
+  margin: 0 $spacing-4;
+  @include mq(xl) {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 }

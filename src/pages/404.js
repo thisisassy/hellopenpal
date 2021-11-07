@@ -1,12 +1,17 @@
 import React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const NotFoundPage = () => {
   return (
-    <div>
-      <h1>Sorry, Page not found.</h1>
-    </div>
+    <Layout>
+      <Seo pagetitle="ページが見つかりません" />
+      <section>
+        <h1>404 Not Found</h1>
+        <p>Sorry, Page not found.</p>
+      </section>
+    </Layout>
   )
-
 }
 
 export default NotFoundPage

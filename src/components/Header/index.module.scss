@@ -1,8 +1,13 @@
+@import '../../styles/variables.scss';
+
+.header {
+  margin:  0 0 $spacing-7;
+}
 .header__inner {
   height: 80px;
 }
 .title {
-  font-size: 40px;
+  font-size: $size-6;
   line-height: 80px;
   font-family: 'Cookie', cursive;
   font-weight: 400;

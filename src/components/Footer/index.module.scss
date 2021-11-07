@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 $spacing-3;
+  gap: 8px;
+}
+.footer__outer {
+  padding: $spacing-7 0 0;
+  li {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.footer__inner,
+.footer__outer {
+  text-align: center;
+}

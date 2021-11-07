@@ -1,0 +1,81 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.entry {
+  width: 100%;
+  @include mq() {
+    width: 620px;
+    margin: 0 auto;
+  }
+}
+.entry__inner {
+  .title {
+    font-size: $size-4;
+    @include mq() {
+      font-size: $size-5;
+    }
+  }
+  .date {
+    color: $gray;
+    margin: $spacing-1 0 0;
+  }
+}
+.entryContent {
+  margin: $spacing-4 0 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: $spacing-4 0;
+    color: $currentColor;
+  }
+  h1 {
+    font-size: $size-5;
+  }
+  h2 {
+    font-size: $size-4;
+  }
+  h3 {
+    font-size: $size-3;
+  }
+  h4 {
+    font-size: $size-2;
+  }
+  h5,
+  h6 {
+    font-size: $size-1;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  a {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+  }
+  ul,
+  ol,
+  dl {
+    margin-inline-start: 1em;
+    line-height: 1.9;
+  }
+  ul li{
+    list-style: disc;
+  }
+  ol li {
+    list-style-type: decimal;
+  }
+  blockquote {
+    padding: $spacing-1 $spacing-2;
+    p {
+      font-size: $size-1;
+    }
+  }
+  table {
+    width: 100%;
+  }
+}

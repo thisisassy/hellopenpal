@@ -1,8 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import * as styles from "../Footer/index.module.scss"
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+  {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`)
+  const siteTitle = data.site.siteMetadata.title
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__outer}>
@@ -10,7 +20,7 @@ const Footer = () => {
         <li><Link to={`/policy/`}>Policy</Link></li>
       </div>
       <div className={styles.footer__inner}>
-        <p><span>&copy;</span>{` `}Penpal with me 2021</p>
+        <p><span>&copy;{` `}{new Date().getFullYear()}</span>{` `}{siteTitle}</p>
       </div>
     </footer>
   )

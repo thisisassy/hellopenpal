@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 import Postmark from "../ui/Postmark/postmark"
 
 const IndexPage = ({ data }) => {
-  const post = process.env.NODE_ENV === 'production' ? data.allMarkdownRemark.nodes.filter((value) => !value.frontmatter.draft) : data.allMarkdownRemark.nodes
+  const post = data.allMarkdownRemark.edges
   return (
     <Layout>
       <Seo />
@@ -32,6 +32,7 @@ export const query = graphql`
             title
             slug
             date(formatString: "YYYY-MM-DD")
+            draft
           }
         }
       }

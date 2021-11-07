@@ -2,6 +2,7 @@
 title: "post2"
 slug: "post-two"
 date: "2021-11-07"
+draft: true
 ---
 
 ### サンプル記事

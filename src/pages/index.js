@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 import Postmark from "../ui/Postmark/postmark"
 
 const IndexPage = ({ data }) => {
-  const post = data.allMarkdownRemark.edges
+  const post = process.env.NODE_ENV === 'production' ? data.allMarkdownRemark.nodes.filter((value) => !value.frontmatter.draft) : data.allMarkdownRemark.nodes
   return (
     <Layout>
       <Seo />

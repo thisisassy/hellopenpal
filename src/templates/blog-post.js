@@ -33,6 +33,7 @@ query($slug: String!){
         title
         slug
         date(formatString: "YYYY-MM-DD")
+        draft
       }
       tableOfContents
     }

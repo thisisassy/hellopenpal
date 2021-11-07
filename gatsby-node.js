@@ -8,13 +8,17 @@ exports.createPages = async gatsbyNodeHelpers => {
 
   const result = await graphql(`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: {fields: frontmatter___date, order: DESC}
+      filter: {frontmatter: {draft: {ne: true}}}
+    ) {
       edges {
         node {
           frontmatter {
             title
             slug
             date(formatString: "YYYY-MM-DD")
+            draft
           }
         }
       }

@@ -1,6 +1,7 @@
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";
 
+// about, policy
 .pageSection {
   @include mq() {
     padding: 0 $spacing-3;

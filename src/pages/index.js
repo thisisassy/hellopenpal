@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Postmark from "../ui/Postmark/postmark"
 
 const IndexPage = ({ data }) => {
   const post = data.allMarkdownRemark.edges
@@ -18,6 +19,7 @@ const IndexPage = ({ data }) => {
           </article>
         ))}
       </section>
+      <Postmark />
     </Layout>
   )
 }

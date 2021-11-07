@@ -1,7 +1,10 @@
 @import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 .pageSection {
-  padding: 0 $spacing-3;
+  @include mq() {
+    padding: 0 $spacing-3;
+  }
   p {
     margin: $spacing-4 0;
     line-height: 1.7;

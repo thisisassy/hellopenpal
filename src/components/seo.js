@@ -9,7 +9,7 @@ const Seo = props => {
         siteMetadata {
           title
           description
-          url
+          siteUrl
           twitterUsername
         }
       }
@@ -25,9 +25,9 @@ const Seo = props => {
   return (
     <Helmet>
       <title>{title}</title>
-      <link rel="canonical" href={seo.url} />
+      <link rel="canonical" href={seo.siteUrl} />
       <meta name="description" content={desc} />
-      <meta property="ogi:url" content={seo.url} />
+      <meta property="ogi:url" content={seo.siteUrl} />
       <meta property="ogi:type" content="website" />
       <meta property="ogi:title" content={seo.title} />
       <meta property="ogi:description" content={desc} />

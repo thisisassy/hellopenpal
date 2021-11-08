@@ -6,6 +6,13 @@ module.exports = {
     twitterUsername: "@harukaashiuchi",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-G5CYNEJTXM`,
+        head: true,
+      },
+    },
     `gatsby-plugin-sass`,
     `react-helmet`,
     `gatsby-transformer-remark`,

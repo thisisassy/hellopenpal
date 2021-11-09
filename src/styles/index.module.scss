@@ -11,15 +11,10 @@
   right: 4%;
 }
 .picks {
-  display: grid;
-  grid-gap: $spacing-3;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr 0;
-  margin: 0 0 $spacing-2;
+  display: inherit;
 }
 .picksItem {
   border: 1px solid #ccc;
-  border-radius: 4px;
-  grid-column: 1 / 3;
   padding: $spacing-3 $spacing-2;
+  margin: 0 0 $spacing-2;
 }

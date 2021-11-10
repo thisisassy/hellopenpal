@@ -6,14 +6,44 @@ module.exports = {
     twitterUsername: "@harukaashiuchi",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-G5CYNEJTXM`,
+        head: true,
+      },
+    },
     `gatsby-plugin-sass`,
     `react-helmet`,
-    `gatsby-transformer-remark`,
+    `gatsby-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              quality: 90,
+            },
+          },
+        ],
       },
     },
     {

@@ -42,11 +42,11 @@ const Seo = props => {
       <meta property="ogi:title" content={seo.title} />
       <meta property="ogi:description" content={desc} />
       <meta property="ogi:image" content={imgUrl} />
-      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={imgUrl} />
+      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   )
 }

@@ -1,8 +1,14 @@
-// fontColor
-$currentColor: #333;
-$gray: #666;
-$blue: #007bbb;
-$dull-red: #bb5535;
+:root {
+  // fontColor
+  --color-black: #222;
+  --color-default: #333;
+  --color-gray: #666;
+  --color-blue: #04A7FF;
+  --color-darkBlue: #1558d6;
+  --color-red: #D72147;
+  --color-softWhite: #FFFFF0;
+  --color-dullRed: #bb5535;
+}
 
 // fontSize
 $spacing-half: 4px;

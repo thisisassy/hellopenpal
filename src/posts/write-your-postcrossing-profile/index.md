@@ -3,6 +3,7 @@ title: "Postcrossingをはじめよう(2) プロフィールの書き方"
 slug: "write-your-postcrossing-profile"
 date: "2021-11-10"
 draft: true
+category: ["Postcrossing"]
 ---
 
 ### プロフィールを編集しよう

@@ -11,10 +11,33 @@
   right: 4%;
 }
 .picks {
-  display: inherit;
+  display: flex;
+  flex-direction: column;
+
+  @include mq() {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $spacing-3;
+  }
 }
 .picksItem {
   border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 100px;
   padding: $spacing-3 $spacing-2;
   margin: 0 0 $spacing-2;
+
+  &:nth-child(1) {
+    flex: 1 100%;
+  }
+  &:nth-child(2) {
+    flex-grow: 1;
+  }
+}
+.title {
+  font-size: $size-2;
+}
+.date {
+  font-size: $size-small;
+  color: $gray;
 }

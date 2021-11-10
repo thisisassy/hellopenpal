@@ -15,8 +15,8 @@ const IndexPage = ({ data }) => {
           {post.map(({ node }) => (
             <article className={styles.picksItem} key={node.frontmatter.slug}>
               <Link to={`/${node.frontmatter.slug}/`}>
-                <h2>{node.frontmatter.title}</h2>
-                <p><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></p>
+                <h2 className={styles.title}>{node.frontmatter.title}</h2>
+                <p className={styles.date}><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></p>
               </Link>
             </article>
           ))}

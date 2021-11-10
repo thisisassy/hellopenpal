@@ -27,6 +27,10 @@
   padding: $spacing-3 $spacing-2;
   margin: 0 0 $spacing-2;
 
+  a {
+    display: block;
+  }
+
   &:nth-child(1) {
     flex: 1 100%;
   }

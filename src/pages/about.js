@@ -3,10 +3,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../styles/page.module.scss"
 
-const AboutPage = () => {
+const AboutPage = ({ location }) => {
   return (
     <Layout>
       <Seo pagetitle="About"
+        pagepath={location.pathname}
         pagedesc="海外文通のはじめかた、英語で手紙の書き方を紹介するサイトです" />
       <section className={styles.pageSection}>
         <h2 className={styles.sectionHeading}>About</h2>

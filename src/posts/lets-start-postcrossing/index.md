@@ -3,6 +3,7 @@ title: "Postcrossingをはじめよう(1) アカウントをつくろう"
 slug: "lets-start-postcrossing"
 date: "2021-11-09"
 draft: false
+category: ["Postcrossing"]
 ---
 
 ## Postcrossingとは？

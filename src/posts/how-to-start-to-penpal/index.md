@@ -3,6 +3,7 @@ title: "海外文通のはじめかたガイド"
 slug: "how-to-start-to-penpal"
 date: "2021-11-07"
 draft: false
+category: ["Penpal"]
 ---
 
 ### 海外文通をはじめるには

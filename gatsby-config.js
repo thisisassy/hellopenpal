@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Penpal with me",
-    description: "Penpalwithmeは海外文通をはじめたい人、手紙で交流したい人のための文通サイトです",
-    siteUrl: "https://www.penpalwith.me",
+    description: "Penpalwithmeは海外文通をはじめたい人、手紙で交流したい人のための文通ポータルサイトです",
+    siteUrl: "https://www.penpalwithme.com",
+    lang: "ja",
     twitterUsername: "@harukaashiuchi",
   },
   plugins: [

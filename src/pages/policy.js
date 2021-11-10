@@ -3,10 +3,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../styles/page.module.scss"
 
-const PolicyPage = () => {
+const PolicyPage = ({ location }) => {
   return (
     <Layout>
-      <Seo pagetitle="Privacy Policy" />
+      <Seo pagetitle="Privacy Policy"
+        pagepath={location.pathname} />
       <section className={styles.pageSection}>
         <h2 className={styles.sectionHeading}>Privacy Policy</h2>
         <div>

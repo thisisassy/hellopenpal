@@ -20,23 +20,33 @@ const Seo = props => {
   const title = props.pagetitle
     ? `${props.pagetitle} | ${seo.title}`
     : seo.title
+
   const desc = props.desc || seo.description
+
+  const url = props.pagepath
+    ? `${seo.siteUrl}${props.pagepath}`
+    : seo.siteUrl
+
+  const imgUrl = props.pageimg
+    ? `${seo.siteUrl}${props.pageimg}`
+    : `${seo.siteUrl}/ogimage.png`
 
   return (
     <Helmet>
+      <html lang="ja" />
       <title>{title}</title>
-      <link rel="canonical" href={seo.siteUrl} />
+      <link rel="canonical" href={url} />
       <meta name="description" content={desc} />
-      <meta property="ogi:url" content={seo.siteUrl} />
+      <meta property="ogi:url" content={url} />
       <meta property="ogi:type" content="website" />
       <meta property="ogi:title" content={seo.title} />
       <meta property="ogi:description" content={desc} />
-      {/* <meta property="ogi:image" content={seo.image} /> */}
+      <meta property="ogi:image" content={imgUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={desc} />
-      {/* <meta name="twitter:image" content={seo.image} /> */}
+      <meta name="twitter:image" content={imgUrl} />
     </Helmet>
   )
 }

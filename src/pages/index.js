@@ -5,11 +5,11 @@ import Seo from "../components/seo"
 import Postmark from "../ui/Postmark/postmark"
 import * as styles from "../styles/index.module.scss"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const post = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <Seo />
+      <Seo pagepath={location.pathname} />
       <section className={styles.section}>
         <ul className={styles.picks}>
           {post.map(({ node }) => (

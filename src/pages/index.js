@@ -9,7 +9,8 @@ const IndexPage = ({ data, location }) => {
   const post = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <Seo pagepath={location.pathname} />
+      <Seo pagetitle="海外文通のはじめかた"
+        pagepath={location.pathname} />
       <section className={styles.section}>
         <ul className={styles.picks}>
           {post.map(({ node }) => (

@@ -18,7 +18,7 @@ const Seo = props => {
   const seo = data.site.siteMetadata
 
   const title = props.pagetitle
-    ? `${props.pagetitle} | ${seo.title}`
+    ? `${props.pagetitle} - ${seo.title}`
     : seo.title
 
   const desc = props.desc || seo.description

@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Postmark from "../ui/Postmark/postmark"
 import * as styles from "../styles/index.module.scss"
 
 const IndexPage = ({ data, location }) => {
@@ -11,19 +10,25 @@ const IndexPage = ({ data, location }) => {
     <Layout>
       <Seo pagetitle="海外文通のはじめかた"
         pagepath={location.pathname} />
+      <div className={styles.topHeading}>
+        <div className={styles.container}>
+          <h2>Hello penpals</h2>
+          <p>This website is portal site for people who love letter &amp; postcards.</p>
+        </div>
+      </div>
       <section className={styles.section}>
+        <h3>Feature</h3>
         <ul className={styles.picks}>
           {post.map(({ node }) => (
-            <article className={styles.picksItem} key={node.frontmatter.slug}>
-              <Link to={`/${node.frontmatter.slug}/`}>
+            <Link to={`/${node.frontmatter.slug}/`}>
+              <article className={styles.picksItem} key={node.frontmatter.slug}>
                 <h2 className={styles.title}>{node.frontmatter.title}</h2>
                 <p className={styles.date}><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></p>
-              </Link>
-            </article>
+              </article>
+            </Link>
           ))}
         </ul>
       </section>
-      <div className={styles.postmark}><Postmark /></div>
     </Layout>
   )
 }

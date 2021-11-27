@@ -17,10 +17,10 @@ const IndexPage = ({ data, location }) => {
         </div>
       </div>
       <section className={styles.section}>
-        <h3>Feature</h3>
+        <h3 className={styles.heading}>Penpal / 海外文通のはじめかた</h3>
         <ul className={styles.picks}>
           {post.map(({ node }) => (
-            <Link to={`/${node.frontmatter.slug}/`}>
+            <Link className={styles.link} to={`/${node.frontmatter.slug}/`}>
               <article className={styles.picksItem} key={node.frontmatter.slug}>
                 <h2 className={styles.title}>{node.frontmatter.title}</h2>
                 <p className={styles.date}><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></p>

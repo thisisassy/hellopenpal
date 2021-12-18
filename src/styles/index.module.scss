@@ -3,37 +3,7 @@
 
 // index
 .section {
-  position: relative;
-}
-.topHeading {
-  height: 120px;
-  padding: $size-8 0;
-  background: #C1304E;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw) $spacing-4;
-  padding: $size-8 0;
-
-  h2,
-  p {
-    color: #FFFFF0;
-  }
-  h2 {
-    margin: $spacing-1;
-    @include mq() {
-      font-size: $spacing-6;
-    }
-  }
-  p {
-    font-size: $size-2;
-  }
-}
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 $size-7;
-}
-.heading {
- margin: 0 0 $size-1; 
+  margin: $spacing-8 0;
 }
 .picks {
   display: flex;
@@ -42,21 +12,17 @@
   @include mq() {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: $spacing-6;
+    column-count: 3;
   }
 }
 .picksItem {
-  border-top: 1px solid #080808;
-  min-height: 100px;
   padding: $spacing-4 0 0;
   margin: 0 0 $spacing-2;
 }
 .link {
   display: block;
-  &:focus,
-  &:hover {
-    background: #fafafa;
-  }
 }
 .title {
   font-size: $size-2;

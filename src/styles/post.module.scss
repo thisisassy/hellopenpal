@@ -17,13 +17,17 @@
       font-size: $size-5;
     }
   }
-  .date {
+  .metaItem {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
     color: var(--color-gray);
-    margin: $spacing-1 0 0;
+    margin: $spacing-2 0 0;
   }
 }
 .entryContent {
   margin: $spacing-4 0 0;
+  font-family: 'Noto Sans JP', sans-serif;
 
   h1,
   h2,
@@ -32,7 +36,7 @@
   h5,
   h6,
   p {
-    margin: $spacing-4 0;
+    margin: $spacing-5 0;
     color: var(--color-default);
   }
   h1 {

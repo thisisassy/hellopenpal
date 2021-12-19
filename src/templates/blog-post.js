@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../styles/post.module.scss"
@@ -13,11 +13,17 @@ const BlogPost = ({ data }) => {
         <div className={styles.entry__inner}>
           <header>
             <h1 className={styles.title}>{post.frontmatter.title}</h1>
-            <p className={styles.date}><time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time></p>
+            <div className={styles.metaItem}>
+              <p><time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time></p>
+              <span>{post.frontmatter.category}</span>
+            </div>
           </header>
           <div className={styles.entryContent}>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
+        </div>
+        <div>
+          <p><Link href={'/'}>カテゴリートップにもどる</Link></p>
         </div>
       </article>
     </Layout>
@@ -34,6 +40,7 @@ query($slug: String!){
         slug
         date(formatString: "YYYY-MM-DD")
         draft
+        category
       }
       tableOfContents
     }

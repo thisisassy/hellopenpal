@@ -5,10 +5,11 @@ exports.createPages = async gatsbyNodeHelpers => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const catTemplate = path.resolve(`./src/templates/categories.js`)
 
   const result = await graphql(`
   {
-    allMarkdownRemark(
+    posts: allMarkdownRemark(
       sort: {fields: frontmatter___date, order: DESC}
       filter: { frontmatter: { draft: { ne: true } } }
     ) {
@@ -23,13 +24,18 @@ exports.createPages = async gatsbyNodeHelpers => {
         }
       }
     }
+    categories: allMarkdownRemark {
+      group(field: frontmatter___category) {
+        fieldValue
+      }
+    }
   }
   `)
   if (result.error) {
     reporter.paniOnBuild(`Error while running GraphQL query`)
     return
   }
-  const posts = result.data.allMarkdownRemark.edges
+  const posts = result.data.posts.edges
 
   // blogPost
   posts.forEach(({ node }) => {
@@ -38,6 +44,17 @@ exports.createPages = async gatsbyNodeHelpers => {
       component: blogPost,
       context: {
         slug: node.frontmatter.slug,
+      },
+    })
+  })
+
+  const categories = result.data.categories.group
+  categories.forEach(category => {
+    createPage({
+      path: `/category/${category.fieldvalue}/`,
+      component: catTemplate,
+      context: {
+        category: category.fieldvalue,
       },
     })
   })

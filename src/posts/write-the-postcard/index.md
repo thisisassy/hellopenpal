@@ -3,7 +3,8 @@ title: "Postcrossingをはじめよう(3) ポストカードを書いてみよ�
 slug: "write-the-postcard"
 date: "2021-11-25"
 draft: false
-category: ["Postcrossing"]
+categories: ["Postcrossing"]
+tags: ["Postcrossing", "ポストカード"]
 ---
 
 ### ポストカードを書こう

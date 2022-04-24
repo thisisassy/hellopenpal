@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
             <h1 className={styles.title}>{post.frontmatter.title}</h1>
             <div className={styles.metaItem}>
               <p><time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time></p>
-              <span>{post.frontmatter.category}</span>
+              <span>{post.frontmatter.categories}</span>
             </div>
           </header>
           <div className={styles.entryContent}>
@@ -40,7 +40,7 @@ query($slug: String!){
         slug
         date(formatString: "YYYY-MM-DD")
         draft
-        category
+        categories
       }
       tableOfContents
     }

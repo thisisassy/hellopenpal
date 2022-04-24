@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import * as styles from "../styles/category.module.scss"
 
 const Categories = ({ data, pageContext }) => {
   const { category } = pageContext
@@ -10,8 +11,8 @@ const Categories = ({ data, pageContext }) => {
   return (
     <Layout>
       <Seo pagetitle={catHeading} />
-      <div>
-        <h2>{catHeading}</h2>
+      <div className={styles.headArea}>
+        <h2 className={styles.heading}>{catHeading}</h2>
       </div>
       <section>
         <ul>
@@ -30,10 +31,10 @@ const Categories = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-query MyQuery($category: String) {
+query($categories: String) {
   allMarkdownRemark(
     sort: {fields: frontmatter___date, order: DESC}
-    filter: {frontmatter: {category: {in: [$category]}}}
+    filter: {frontmatter: {categories: {in: [$categories]}}}
   ) {
     edges {
       node {

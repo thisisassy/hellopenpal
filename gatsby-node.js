@@ -25,7 +25,7 @@ exports.createPages = async gatsbyNodeHelpers => {
       }
     }
     categories: allMarkdownRemark {
-      group(field: frontmatter___category) {
+      group(field: frontmatter___categories) {
         fieldValue
       }
     }

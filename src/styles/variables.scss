@@ -8,9 +8,22 @@
   --color-red: #D72147;
   --color-softWhite: #FFFFF0;
   --color-dullRed: #bb5535;
+
+  // margin
+  --spacing-half: 4px;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 20px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+  --spacing-6: 40px;
+  --spacing-7: 48px;
+  --spacing-8: 64px;
+  --spacing-9: 80px;
+  --spacing-10: 112px;
+  --spacing-11: 128px;
 }
 
-// fontSize
 $spacing-half: 4px;
 $spacing-1: 8px;
 $spacing-2: 16px;
@@ -24,6 +37,7 @@ $spacing-9: 80px;
 $spacing-10: 112px;
 $spacing-11: 128px;
 
+// fontSize
 $size-small: 14px;
 $size-1: 16px;
 $size-2: 20px;

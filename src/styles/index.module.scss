@@ -5,6 +5,7 @@
 .section {
   margin: $spacing-8 0;
 }
+
 .picks {
   display: flex;
   flex-direction: column;
@@ -17,16 +18,20 @@
     column-count: 3;
   }
 }
+
 .picksItem {
   padding: $spacing-4 0 0;
   margin: 0 0 $spacing-2;
 }
+
 .link {
   display: block;
 }
+
 .title {
   font-size: $size-2;
 }
+
 .date {
   font-size: $size-small;
   color: var(--color-gray)

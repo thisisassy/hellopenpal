@@ -3,14 +3,24 @@
 
 // about, policy
 .pageSection {
+  margin: var(--spacing-6) 0 0;
+
   @include mq() {
     padding: 0 $spacing-3;
   }
+
+  @include mq(md) {
+    max-width: 660px;
+    padding: var(--spacing-3);
+  }
+
   p {
+    font-family: Arial, Helvetica, sans-serif;
     margin: $spacing-4 0;
     line-height: 1.7;
   }
 }
+
 .sectionHeading {
   margin: 0 0 $spacing-1;
 }

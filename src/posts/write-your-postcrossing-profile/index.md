@@ -3,7 +3,8 @@ title: "Postcrossingをはじめよう(2) プロフィールの書き方"
 slug: "write-your-postcrossing-profile"
 date: "2021-11-11"
 draft: false
-category: ["Postcrossing"]
+categories: ["Postcrossing"]
+tags: ["Postcrossing"]
 ---
 
 前回はPostcrossingのアカウントをつくりました。つぎはプロフィールにあなたについての情報を書いていきましょう。
